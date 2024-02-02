@@ -1,0 +1,36 @@
+type Name {
+    name: String
+}
+
+type Product {
+    id: String
+    taxCode: String
+    shortDescription: String
+    description: String
+    department: Name
+    category: Name
+    brand: Name
+}
+
+type ProductSpecification {
+    value: String
+    field: Name
+}
+
+type Specification {
+    product: [ProductSpecification]
+}
+
+type ProductSearch {
+    id: String
+    name: String
+    ean: String
+    manufacturerCode: String
+    packagedWidth: String
+    packagedHeight: String
+    packagedLength: String
+    packagedWeightKg: String
+    product: Product
+    specifications: Specification
+    isActive: Boolean
+}

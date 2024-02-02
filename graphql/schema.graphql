@@ -1,0 +1,4 @@
+type Query {
+  searchProduct(skuId: String): ProductSearch
+  @cacheControl(scope: PUBLIC, maxAge: LONG)
+}
